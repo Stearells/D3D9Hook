@@ -14,6 +14,7 @@ void D3D9Hook::InstallHook(fun pRender)
 	if (initFlag)
 		return;
 
+	initFlag = true;
 	pOrig = malloc(5);
 	pHooked = malloc(5);
 
@@ -51,4 +52,13 @@ void D3D9Hook::hES9(IDirect3DDevice9* device)
 	__asm	call [poES9]
 	Renderer(device);
 	memcpy(poES9, pHooked, 5);
+}
+
+void D3D9Hook::FreeHook(void)
+{
+	if (!initFlag)
+		return;
+
+	if (pOrig) free(pOrig);
+	if (pHooked) free(pHooked);
 }

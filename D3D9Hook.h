@@ -1,3 +1,9 @@
+/*
+* Simple D3D9 Hook v1.1
+* Stearells (C) 2020
+* \(o_o)/
+*/
+
 #pragma once
 
 #include <Windows.h>
@@ -15,6 +21,7 @@ namespace D3D9Hook
 	void GetMethods(void);
 	void HookMethods(void);
 	void hES9(IDirect3DDevice9* device);
+	void FreeHook(void);
 }
 
 namespace Memory
