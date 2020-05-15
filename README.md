@@ -40,7 +40,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
     case DLL_PROCESS_DETACH:
-        D3D9Hook::FreeHook();
+        //D3D9Hook::FreeHook(); //unstable feature.
         break;
     }
     return TRUE;
