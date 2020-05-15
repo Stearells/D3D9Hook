@@ -1,5 +1,8 @@
 D3D9Hook - Simple hook for Direct3D 9.
 ====
+It is only for 32 bits.
+===
+P.s. Deprecated.
 
 You can use in here:
 ```CPP
